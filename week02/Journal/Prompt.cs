@@ -3,15 +3,18 @@ using System.Security.Cryptography;
 
 public class Prompt
 {
-    public string _prompt;
 
-    public List<Prompt> myPrompts = new List<Prompt>();
+    public List<Entry> _newPrompt = new List<Entry>();
 
     public void Display()
     {
-        foreach (Prompt displayPrompt in myPrompts)
+        Console.WriteLine(_newPrompt);
+
+        foreach (Entry displayPrompt in _newPrompt)
         {
-            displayPrompt.Display();
+            Random GetRandomPrompt = new Random();
+            int index = GetRandomPrompt.Next(_newPrompt.Count);
+            Console.WriteLine(_newPrompt[index]);
         }
     }
 }

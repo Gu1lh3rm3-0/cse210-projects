@@ -10,9 +10,12 @@ public class Videos
     public void Display()
     {
         Console.WriteLine($"Author: {_author}");
-        Console.WriteLine($"Title: {_author}");
+        
+        Console.WriteLine($"Title: {_title}");
+        
         Console.WriteLine($"Time: {_time} seconds");
-        Console.WriteLine("Comments:");
+        
+        Console.WriteLine("Comments");
 
         foreach (Comments comments in _comments)
         {

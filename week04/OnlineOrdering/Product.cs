@@ -2,15 +2,20 @@ using System;
 
 public class Products
 {
-    private int _productId;
+    private string _productName;
+    private string _productId;
     private int _productPrice;
     private int _productQuant;
 
-    public Products(int ProductID)
+    public Products(string ProductID)
     {
         _productId = ProductID;
     }
-    public Products(int ProductPrice, int ProductQuant)
+    public void SetProductsName(string ProductName)
+    {
+        _productName = ProductName;
+    }
+    public void GetThePrice (int ProductPrice, int ProductQuant)
     {
         _productPrice = ProductPrice;
         _productQuant = ProductQuant;
